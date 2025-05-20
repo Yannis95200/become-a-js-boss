@@ -1,22 +1,22 @@
 let nombre = Math.floor(Math.random() * 100) + 1;
 
-const affichage3  = document.getElementById("guess")
-const btn  = document.getElementById("check")
-const feed  = document.getElementById("feedback")
-const essaye  = document.getElementById("essais")
+const affichage3 = document.getElementById("guess")
+const btn = document.getElementById("check")
+const feed = document.getElementById("feedback")
+const essaye = document.getElementById("essais")
 
 let tentatives = 0
 
-btn.addEventListener("click", function(){
-    feed.textContent = `${affichage3.value}`
-    const saisie = Number(affichage3.value);
-    if (saisie < nombre) {
-        feed.textContent = "Trop petit !";
-      } else if (saisie > nombre) {
-        feed.textContent = "Trop grand !";
-      } else {
-        feed.textContent = "Bravo !";
-      // Créer et afficher le bouton Replay
+btn.addEventListener("click", function () {
+  feed.textContent = `${affichage3.value}`
+  const saisie = Number(affichage3.value);
+  if (saisie < nombre) {
+    feed.textContent = "Trop petit !";
+  } else if (saisie > nombre) {
+    feed.textContent = "Trop grand !";
+  } else {
+    feed.textContent = "Bravo !";
+    // Créer et afficher le bouton Replay
     const btnReplay = document.createElement("button");
     btnReplay.textContent = "Replay";
     document.body.appendChild(btnReplay); // l'ajoute au body (ou autre conteneur)
