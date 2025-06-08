@@ -1,15 +1,19 @@
 const start = document.getElementById("demarrer");
 const paragraphe = document.getElementById("affichage");
+const input = document.getElementById("seconde");
 
-start.addEventListener("click", function() {
-    paragraphe.textContent = `${affichage.value}`;
-    const valeur = Number(affichage.value)
-    let count = 60;
+start.addEventListener("click", function () {
+    paragraphe.textContent = `${input.value}`;
+    const valeur = Number(input.value)
+    let count = valeur;
+
     let timer = setInterval(() => {
+        paragraphe.textContent = count
         console.log(count)
         count--;
-    }, interval);
-    if (count ===0)
-        clearInterval(timer)
-    console.log('Terminé')
+        if (count < 0) {
+            clearInterval(timer)
+            console.log('Terminé')
+        }
+    }, 1000);
 });
