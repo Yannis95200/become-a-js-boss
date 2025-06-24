@@ -1,0 +1,17 @@
+# Voir les containers en cours
+docker ps
+
+# Voir tous les containers (même arrêtés)
+docker ps -a
+
+# Supprimer un container
+docker rm <id_du_container>
+
+# Voir toutes les images
+docker images
+
+# Supprimer une image
+docker rmi <id_de_l_image>
+
+# Tout nettoyer d’un coup (images + containers + cache)
+docker system prune -a
